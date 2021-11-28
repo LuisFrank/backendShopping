@@ -1,0 +1,237 @@
+package main
+
+import "fmt"
+
+//DOS
+func normalFunction(message string) {
+	fmt.Println(message)
+}
+
+func tripleArgument(a, b int, c string) {
+	fmt.Println(a, b, c)
+}
+
+func returnValue(a int) int {
+	return a * 2
+}
+
+func returnTwoValue(a int) (c, d int) {
+	return a, a * 2
+}
+
+func Println(text string) {
+	fmt.Println(text)
+}
+
+//siete
+
+func isPalindromo(text string) {
+	var textReverse string
+
+	for i := len(text) - 1; i >= 0; i-- {
+		textReverse += string(text[i])
+	}
+
+	if text == textReverse {
+		Println("Es palindromo")
+	}
+}
+
+type car struct {
+	brand string
+	year  int
+}
+
+func main() {
+
+	//Nove
+	//Strucs
+	// v1
+	// myCar := car{brand: "Ford", year: 2020}
+	// fmt.Println(myCar)
+
+	// // v2
+	// var secondCar car
+	// secondCar.brand = "Ferrari"
+	// secondCar.year = 2021
+	// fmt.Println(secondCar)
+
+	// // OUTO
+	m := make(map[string]int)
+
+	m["jose"] = 10
+	m["frank"] = 20
+
+	fmt.Println(m)
+
+	//Recorrer map
+	for i, v := range m {
+		fmt.Println(i, v)
+	}
+
+	//Encontrar valor
+	value, ok := m["jose"]
+	fmt.Println(value, ok)
+
+	// //SIETE
+	// slice := []string{"hola", "que", "hace"}
+
+	// //v1
+	// for i, valor := range slice {
+	// 	fmt.Println(i, valor)
+	// }
+
+	// //v2
+	// for i := range slice {
+	// 	fmt.Println(i)
+	// }
+
+	// //seis
+	// var array [4]int
+	// array[0] = 1
+	// array[1] = 2
+	// fmt.Println(array, len(array), cap(array))
+
+	// //Slice
+	// slice := []int{0, 1, 2, 3, 4, 5, 6}
+	// fmt.Println(slice, len(slice), cap(slice))
+	// fmt.Println(slice[0])
+	// fmt.Println(slice[:3])
+	// fmt.Println(slice[2:4])
+	// fmt.Println(slice[4:])
+
+	// //Append
+	// slice = append(slice, 7)
+	// fmt.Println("slice", slice)
+
+	// //Append nueva lista
+	// newSlice := []int{8, 9, 10}
+	// slice = append(slice, newSlice...)
+	// fmt.Println("slice2", slice)
+
+	// //CINCO
+	// defer fmt.Println("1")
+	// defer fmt.Println("2")
+	// defer fmt.Println("3")
+	// fmt.Printf("Mundo")
+
+	//CUATRO
+	// // sin condicion
+	// value := 50
+	// switch {
+	// case value > 100:
+	// 	fmt.Println("Es mayor a 100")
+	// case value < 0:
+	// 	fmt.Println("Es menor a 0")
+	// default:
+	// 	fmt.Println("Default")
+	// }
+	// switch modulo := 4 % 2; modulo {
+	// case 0:
+	// 	fmt.Println("Es par")
+	// default:
+	// 	fmt.Println("Es impar")
+	// }
+
+	// v2
+	// switch modulo := 4 % 2; modulo {
+	// case 0:
+	// 	fmt.Println("Es par")
+	// default:
+	// 	fmt.Println("Es impar")
+	// }
+
+	// v1
+	// modulo := 4 % 2
+	// switch modulo {
+	// case 0:
+	// 	fmt.Println("Es par")
+	// default:
+	// 	fmt.Println("Es impar")
+	// }
+
+	// //TRES
+	// //basic for
+	// for i := 0; i < 10; i++ {
+	// 	fmt.Println("for1", i)
+	// }
+	// //for while
+	// counter := 0
+	// for counter <= 10 {
+	// 	fmt.Println("for2", counter)
+	// 	counter++
+	// }
+
+	// //for forever
+	// counterForever := 0
+	// for {
+	// 	fmt.Println("for2", counter)
+	// 	counterForever++
+	// }
+
+	// //DOS
+	// normalFunction("Hola Mundo")
+	// tripleArgument(1, 2, "3")
+	// value := returnValue(2)
+	// fmt.Println("Value:", value)
+
+	// value1, value2 := returnTwoValue(3)
+	// fmt.Println("Value1 y value 2: ", value1, value2)
+	//UNO
+
+	//Declaracion constantes
+	// const pi float64 = 3.14
+	// const pi2 = 3.1415
+
+	// fmt.Println("pi: ", pi)
+	// fmt.Println("pi2: ", pi2)
+
+	// //Declaracion enteras
+	// base := 12 // : indica que no se creo anterior mente
+	// var altura int = 14
+	// var area int
+
+	// fmt.Println("base", base)
+	// fmt.Println("altura", altura)
+	// fmt.Println("area", area)
+
+	// //Zero values
+	// var a int
+	// var b float64
+	// var c string
+	// var d bool
+
+	// fmt.Println(a, b, c, d)
+
+	// //Area de un cuadrado
+
+	// const baseCuadrado = 10
+	// areaCuadrado := baseCuadrado * baseCuadrado
+	// fmt.Println("areaCuadrado = ", areaCuadrado)
+
+	// //Operaciones
+	// x := 50
+	// y := 10
+
+	// //Suma
+	// result := x + y
+	// fmt.Println("Suma : ", result)
+	// //Resta
+	// result = x - y
+	// fmt.Println("Suma : ", result)
+	// //Multiplicacion
+	// result = x * y
+	// fmt.Println("Multiplicacion:", result)
+	// //Divsion
+	// result = x / y
+	// fmt.Println("Divison :", result)
+	// //Modulo
+	// result = x % y
+	// fmt.Println("Modulo :", result)
+	// //Incremental
+	// x++
+	// fmt.Println("Incremental :", x)
+	// //Decremental
+	// x--
+	// fmt.Println("Decremental :", x)
+}
